@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Graficos</title>
+  </head>
+  <body>
+    <main>
+      <div class="box-val">
+        <div class="box-organic">
+          <input
+            type="number"
+            placeholder="valor 1"
+            class="box-form"
+            id="val1"
+          />
+          <input
+            type="number"
+            placeholder="valor 2"
+            class="box-form"
+            id="val2"
+          />
+          <input
+            type="number"
+            placeholder="valor 3"
+            class="box-form"
+            id="val3"
+          />
+          <input
+            type="number"
+            placeholder="valor 4"
+            class="box-form"
+            id="val4"
+          />
+          <input
+            type="number"
+            placeholder="valor 4"
+            class="box-form"
+            id="val5"
+          />
+        </div>
+      </div>
+      <div class="box-conteiner">
+        <div class="grafics1"></div>
+        <div class="grafics2"></div>
+        <div class="grafics3"></div>
+        <div class="grafics4"></div>
+        <div class="grafics5"></div>
+      </div>
+    </main>
+    <script>
+      var valor1 = document.getElementById("val1");
+      var valor2 = document.getElementById("val2");
+      var valor3 = document.getElementById("val3");
+      var valor4 = document.getElementById("val4");
+      var valor5 = document.getElementById("val5");
+      var bloco = document.querySelector(".grafics1");
+      var bloco1 = document.querySelector(".grafics2");
+      var bloco2 = document.querySelector(".grafics3");
+      var bloco3 = document.querySelector(".grafics4");
+      var bloco4 = document.querySelector(".grafics5");
+
+      function q1() {
+        var tambor1 = valor1.value;
+        var tambor2 = valor2.value;
+        var tambor3 = valor3.value;
+        var tambor4 = valor4.value;
+        var tambor5 = valor5.value;
+        if (
+          tambor1 <= 100 &&
+          tambor2 <= 100 &&
+          tambor3 <= 100 &&
+          tambor4 <= 100 &&
+          tambor5 <= 100
+        ) {
+          console.log("hi");
+          bloco.style.width = tambor1 + "%";
+
+          bloco1.style.width = tambor2 + "%";
+
+          bloco2.style.width = tambor3 + "%";
+
+          bloco3.style.width = tambor4 + "%";
+
+          bloco4.style.width = tambor5 + "%";
+        } else {
+          alert("algun numero maior que 100");
+        }
+      }
+
+      //btn.addEventListener("click", q1);
+      //setInterval(q1, 500);
+      valor1.addEventListener("input", q1);
+      valor2.addEventListener("input", q1);
+      valor3.addEventListener("input", q1);
+      valor4.addEventListener("input", q1);
+      valor5.addEventListener("input", q1);
+    </script>
+  </body>
+</html>
